@@ -1,0 +1,21 @@
+<h1>Enter a New Cause</h1>
+
+<p>
+  <h3><%= link_to 'placeholder link', causes_path %></h3>
+</p>
+<%= simple_form_for :cause, url: causes_path do |f| %>
+
+<%= f.input :name, error: 'Name Required'%>
+<%= f.input :category, collection: ["shelter", "food", "health", "environment", "build"] %>
+<%= f.input :description, error: 'Description Required' %>
+
+<%= f.input :street %>
+<%= f.input :state %>
+<%= f.input :zip %>
+
+<%= f.input :url %>
+<%= f.input :picture %>
+
+<%= f.button :submit, "Add Cause" %>
+
+<% end %>
