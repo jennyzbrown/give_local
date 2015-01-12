@@ -1,0 +1,47 @@
+<h1>Causes Index</h1>
+
+<table class="causes">
+  <thead>
+    <tr>
+      <th width="100">Name</th>
+      <th width="100">Category</th>
+      <th width="100">Description</th>
+      <th width="100">Address</th>
+      <th width="100">City</th>
+      <th width="100">State</th>
+      <th width="100">Zip</th>
+      <th width="100">Phone</th>
+      <th width="100">Url</th>
+      <th width="100">Image</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @causes.each do |cause| %>
+
+      <tr>
+        <td><%= link_to cause.name, cause_path(cause) %></td>
+
+        <td><%= cause.category %></td>
+
+        <td><%= cause.description %></td>
+
+        <td>
+          <p>
+            <%= cause.address %>
+            <br>
+            <%= cause.city %>, <%= cause.state %> <%= cause.zip %>
+          </p>
+        </td>
+
+        <td><%= cause.phone %></td>
+
+        <td><%= cause.url %></td>
+
+        <td><%= cause.url %></td>
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>
