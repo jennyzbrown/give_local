@@ -4,7 +4,6 @@ class Cause < ActiveRecord::Base
   validates :name, presence: true
   validates :category, presence: true
   validates :description, presence: true
-  validates :phone, presence: true
   validates :street, presence: true
   validates :city, presence: true
   validates :state, presence: true
