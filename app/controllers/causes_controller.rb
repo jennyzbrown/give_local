@@ -20,6 +20,27 @@ class CausesController < ApplicationController
     @cause = Cause.find(params[:id])
   end
 
+  def edit
+    @cause = Cause.find(params[:id])
+  end
+
+  def update
+    @cause = Cause.find(params[:id])
+    if @cause.update(cause_params)
+      redirect_to @cause
+    else
+      render 'edit'
+    end
+  end
+
+
+  # def destroy
+  #   @question = Question.find(params[:id])
+  #   @question.destroy
+  #   redirect_to questions_path
+  # end
+
+
   private
   def cause_params
     params.require(:cause).permit(
