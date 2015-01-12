@@ -34,11 +34,11 @@ class CausesController < ApplicationController
   end
 
 
-  # def destroy
-  #   @question = Question.find(params[:id])
-  #   @question.destroy
-  #   redirect_to questions_path
-  # end
+  def destroy
+    @cause = Cause.find(params[:id])
+    @cause.destroy
+    redirect_to causes_path
+  end
 
 
   private
