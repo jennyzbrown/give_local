@@ -29,10 +29,10 @@ class CausesController < ApplicationController
                                   :phone,
                                   :street,
                                   :state,
+                                  :city,
                                   :zip,
                                   :url,
                                   :image,
-                                  :user_id
                                   )
   end
 end

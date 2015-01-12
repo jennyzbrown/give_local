@@ -22,11 +22,12 @@ ActiveRecord::Schema.define(version: 20150112163105) do
     t.string   "description", null: false
     t.string   "phone"
     t.text     "street",      null: false
+    t.text     "city",        null: false
     t.string   "state",       null: false
     t.string   "zip",         null: false
     t.string   "url",         null: false
     t.string   "image"
-    t.integer  "user_id",     null: false
+    t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
