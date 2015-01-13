@@ -4,7 +4,7 @@ class DonatesController < ApplicationController
     @user = current_user
     @user.account -= 1
     @user.save
-    redirect_to root_path
+    redirect_to user_path(@user)
   end
 
 
