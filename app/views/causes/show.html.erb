@@ -36,7 +36,7 @@
       </tr>
   </tbody>
 </table>
-<p class="cta-button"><%= link_to "Give One", donates_path, method: :post,class: 'button round' %></p>
+<p class="cta-button"><%= link_to "Give One", donates_path, method: :post, data: { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
 <%= link_to "Edit", edit_cause_path(@cause) %><br>
 <%= link_to "Delete this Cause", cause_path(@cause), method: :delete,
                                   data: { confirm: 'Are you sure?' } %>
