@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
+
+  get 'users/:id' => 'users#show'
   resources :users
+
   resources :causes
   end
   # The priority is based upon order of creation: first created -> highest priority.
