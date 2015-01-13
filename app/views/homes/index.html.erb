@@ -1,1 +1,9 @@
 Place holder for feature charity
+<%= button_to [:make_happy, @user] do %>
+  Make happy <strong><%= @user.name %></strong>
+<% end %>
+# => "<form method="post" action="/users/1/make_happy" class="button_to">
+#      <button type="submit">
+#        Make happy <strong><%= @user.name %></strong>
+#      </button>
+#    </form>"
