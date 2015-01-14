@@ -1,5 +1,7 @@
 class Cause < ActiveRecord::Base
-  belongs_to :user
+  # has_many :users
+  # belongs_to :user
+has_and_belongs_to_many :users
 
   validates :name, presence: true
   validates :category, presence: true

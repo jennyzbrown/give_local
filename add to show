@@ -1,0 +1,6 @@
+
+        <li class="price">Contributed to: 8</li>
+
+        <% @causes.each do |cause| %>
+        <li class="price"><%= link_to cause.name, cause_path(cause) %></li>
+          <% end %>

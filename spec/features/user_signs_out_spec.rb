@@ -15,8 +15,6 @@ feature 'user signs out', %Q{
 
     visit new_user_session_path
 
-    fill_in 'user_user_name', with: user.user_name
-    fill_in 'Goal', with: user.goal
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
 

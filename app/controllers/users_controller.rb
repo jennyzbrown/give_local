@@ -3,6 +3,7 @@ class UsersController < ApplicationController
 
   def show
    @user = User.find(params[:id])
+   @causes = @user.causes
    if
      @user = current_user
    else
