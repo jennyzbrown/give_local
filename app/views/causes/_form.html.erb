@@ -2,7 +2,7 @@
 <%= simple_form_for @cause do |f| %>
 
 <%= f.input :name, error: 'Name Required'%>
-<%= f.input :category, collection: ["shelter", "food", "health", "environment", "build"] %>
+<%= f.input :category, collection: ["build", "environment", "food", "health", "shelter"] %>
 <%= f.input :description, error: 'Description Required' %>
 
 <%= f.input :street %>

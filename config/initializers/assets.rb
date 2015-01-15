@@ -2,9 +2,11 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( healthy-heart.jpg )
-
-# Add additional assets to the asset load path
+Rails.application.config.assets.precompile += %w( build.png )
+Rails.application.config.assets.precompile += %w( environment.png )
+Rails.application.config.assets.precompile += %w( food.png )
+Rails.application.config.assets.precompile += %w( health.png )
+Rails.application.config.assets.precompile += %w( house.png )
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.

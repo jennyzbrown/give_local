@@ -12,33 +12,35 @@
       <th width="100">Phone</th>
       <th width="100">URL</th>
       <th width="100">Image</th>
-      <th width="100">Account</th>
-
+      <th width="100">Total Contributions: </th>
     </tr>
   </thead>
   <tbody>
-      <tr>
-        <td><%= @cause.name %></td>
-        <td><%= @cause.category %></td>
-        <td><%= @cause.description %></td>
+    <tr>
+      <td><%= @cause.name %></td>
+      <td><%= @cause.category %></td>
+      <td><%= @cause.description %></td>
 
-        <td>
-          <p>
-            <%= @cause.street %>
-            <br>
-            <%= @cause.city %>, <%= @cause.state %> <%= @cause.zip %>
-          </p>
-        </td>
-        <td><%= @cause.phone %></td>
-        <td><%= @cause.url %></td>
-        <td><%= @cause.image %></td>
-        <td><%= @cause.cause_account %></td>
-      </tr>
-      <%= image_tag "#{@cause.image}" %>
+      <td>
+        <p>
+          <%= @cause.street %>
+          <br>
+          <%= @cause.city %>, <%= @cause.state %> <%= @cause.zip %>
+        </p>
+      </td>
+      <td><%= @cause.phone %></td>
+      <td><%= @cause.url %></td>
+      <td> <%= image_tag "#{@cause.image}" %></td>
+      <td> $ <%= @cause.cause_account %>.00</td>
+    </tr>
   </tbody>
 </table>
-<p class="cta-button"><%= link_to "Give One", donates_path(@cause), method: :post, data: { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
+
+<p class="cta-button"><%= link_to "Give One", donates_path(@cause), method: :post, data:
+          { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
+
 <%= link_to "Edit", edit_cause_path(@cause) %><br>
-<%= link_to "Delete this Cause", cause_path(@cause), method: :delete,
-                                  data: { confirm: 'Are you sure?' } %>
+
+<%= link_to "Delete this Cause", cause_path(@cause), method: :delete, data:
+            { confirm: 'Are you sure?' } %>
 
