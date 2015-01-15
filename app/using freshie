@@ -1,6 +1,9 @@
 class HomesController < ApplicationController
   def index
     @causes = Cause.all
-    @cause = @causes.sample
+    @cause = Freshie.fresh(@causes)
+    render 'freshie'
   end
 end
+
+

@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'freshie'
+gem 'whenever'
 gem 'byebug'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "pry-rails"

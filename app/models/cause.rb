@@ -13,22 +13,21 @@ class Cause < ActiveRecord::Base
 
   def self.build_cause(params)
     this_cause = Cause.new(params)
-    this_cause.image = this_cause.get_image_url
+    this_cause.image = Cause.get_image_url_for_category(this_cause.category)
     this_cause
   end
 
-  def get_image_url
+  def self.get_image_url_for_category(category_name)
 
-    if @category == "build"
+    if category_name == "build"
       'build.png'
-      byebug
-    elsif @category == "environment"
+    elsif category_name == "environment"
       'environment.png'
-    elsif @category == "food"
+    elsif category_name =="food"
       'food.png'
-    elsif @category == "health"
+    elsif category_name =="health"
       'health.png'
-    elsif @category == "shelter"
+    elsif category_name =="shelter"
       'shelter.png'
     end
 
