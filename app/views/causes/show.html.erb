@@ -37,14 +37,3 @@
 </table>
 
 
-<p class="cta-button"><%= link_to "Give One", donates_path(@cause), method: :post, data:
-          { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
-
-
-<% if current_user != nil && current_user.email == "admin@gmail.com"  %>
-<%= link_to "Edit", edit_cause_path(@cause) %><br>
-
-<%= link_to "Delete this Cause", cause_path(@cause), method: :delete, data:
-            { confirm: 'Are you sure?' } %>
-  <% end %>
-
