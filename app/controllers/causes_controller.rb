@@ -8,7 +8,8 @@ class CausesController < ApplicationController
   end
 
   def create
-    @cause = Cause.new(cause_params)
+    @cause = Cause.build_cause(cause_params)
+    @cause.cause_account = 0
     if @cause.save
       redirect_to causes_path
     else

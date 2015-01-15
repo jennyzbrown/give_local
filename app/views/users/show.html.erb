@@ -8,6 +8,15 @@
         <li class="price"><%= @user.email %></li>
         <li class="price">Annual Goal: <%= @user.goal %></li>
         <li class="price">Account: <%= @user.account %></li>
+        <li class="price">Contributed to: </li>
+
+
+<% @user.causes.each do |cause|  %>
+
+      <li class="price"><%= cause.name %></li>
+      <% end %>
+
+
         <li class="cta-button"><%= link_to 'Edit My Account', edit_user_registration_path, class: 'button round' %></li>
         <li class="cta-button"><%= link_to "Delete My Account", user_registration_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button round' %></li>
 

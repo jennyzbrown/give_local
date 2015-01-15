@@ -31,7 +31,6 @@ ActiveRecord::Schema.define(version: 20150113224928) do
     t.datetime "updated_at",    null: false
     t.integer  "cause_account"
     t.integer  "user_id"
-  end
 
   add_index "causes", ["user_id"], name: "index_causes_on_user_id", using: :btree
 

@@ -8,17 +8,12 @@ class DonatesController < ApplicationController
     @user = current_user
     @user.account -= 1
     @user.goal -= 1
+    @cause = Cause.find(params[:format])
+    @user.causes << @cause
+    @cause.cause_account += 1
+    @cause.save
     @user.save
-binding.pry
-
-     @cause = Cause.find(cause_params)
-
     redirect_to user_path(@user)
 
   end
-    private
-    def cause_params
-      params.require(:causes_users).permit(:user_id, :cause_id)
-    end
-
 end

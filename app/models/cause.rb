@@ -14,4 +14,14 @@ has_and_belongs_to_many :users
   # validates :image, presence: true
   # validates :user_id, presence: true
 
+  def self.build_cause(params)
+    this_cause = Cause.new(params)
+    byebug
+    this_cause.image = this_cause.get_image_url
+    this_cause
+  end
+
+  def get_image_url
+    '/categories/healthy-heart.jpg'
+  end
 end
