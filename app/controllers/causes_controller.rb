@@ -55,7 +55,9 @@ class CausesController < ApplicationController
                                   :zip,
                                   :url,
                                   :image,
-                                  :cause_account
+                                  :cause_account,
+                                  :user_id
+
                                   )
   end
 end

@@ -1,4 +1,4 @@
-raclass RemoveUserIdFromCauses < ActiveRecord::Migration
+class RemoveUserIdFromCauses < ActiveRecord::Migration
   def change
     remove_column :causes, :user_id, :integer
   end
