@@ -7,7 +7,7 @@ class DonatesController < ApplicationController
 
     @user = current_user
     @user.account -= 1
-    @user.goal -= 1
+    @user.amount_given += 1
     @cause = Cause.find(params[:format])
     @user.causes << @cause
     @cause.cause_account += 1

@@ -5,6 +5,7 @@ FactoryGirl.define do
   factory :user do
     user_name 'Jenny'
     goal '5000'
+    amount given '0'
     sequence(:email) {|n| "user#{n}@example.com" }
     password 'password'
     password_confirmation 'password'
@@ -14,7 +15,7 @@ FactoryGirl.define do
 
   factory :cause do
     name 'Charity'
-    goal 'shelter'
+    category 'shelter'
     description 'giving to homeless people'
     street '33 harrison ave'
     city 'boston'

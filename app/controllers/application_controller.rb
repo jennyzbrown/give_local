@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.for(:sign_up) << :user_name
     devise_parameter_sanitizer.for(:sign_up) << :goal
     devise_parameter_sanitizer.for(:sign_up) << :account
+    devise_parameter_sanitizer.for(:sign_up) << :amount_given
   end
 
 end

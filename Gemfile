@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 gem 'freshie'
 
-gem 'byebug'
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "pry-rails"
 gem 'rails', '4.2.0'
 # Use postgresql as the database for Active Record
