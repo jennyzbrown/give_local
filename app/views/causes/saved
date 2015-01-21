@@ -1,0 +1,9 @@
+<h1>All Causes</h1><br>
+<%= link_to "Add Your Cause", new_cause_path %></br>
+<div class="row">
+  <ul class="small-block-grid-4 title if you want">
+    <% @causes.each do |cause| %>
+      <li> <%= image_tag "#{cause.image}", class: "cat_img" %> </li>
+      <% end %>
+  </ul>
+</div>
