@@ -27,8 +27,9 @@ class CausesController < ApplicationController
 
   def update
     @cause = Cause.find(params[:id])
+
     if @cause.update(cause_params)
-      redirect_to @cause
+      redirect_to cause_path(@cause)
     else
       render 'edit'
     end

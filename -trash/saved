@@ -1,0 +1,61 @@
+      <li> <%= link_to "#{cause.url}"%> <%= image_tag "#{cause.image}"%> </li>
+
+      <li> <%= link_to cause_path(cause) %> </l
+
+<h1>All Causes</h1><br>
+<%= link_to "Add Your Cause", new_cause_path %></br>
+<div class="row">
+  <ul class="small-block-grid-4 title if you want">
+    <% @causes.each do |cause| %>
+      <li> <%= image_tag "#{cause.image}", class: "cat_img" %> </li>
+      <% end %>
+  </ul>
+</div>
+
+
+
+<h1>All Causes</h1><br>
+<%= link_to "Add Your Cause", new_cause_path %></br>
+
+<table class="causes">
+  <thead>
+    <tr>
+      <th width="100">Name</th>
+      <th width="100">Category</th>
+      <th width="100">$1 Means: </th>
+      <th width="100">Address</th>
+      <th width="100">Phone</th>
+      <th width="100">URL</th>
+      <th width="100">Image</th>
+
+    </tr>
+  </thead>
+  <tbody>
+
+    <% @causes.each do |cause| %>
+
+      <tr>
+        <td><%= link_to cause.name, cause_path(cause) %></td>
+
+        <td><%= cause.category %></td>
+
+        <td><%= cause.description %></td>
+
+        <td>
+          <p>
+            <%= cause.street %>
+            <br>
+            <%= cause.city %>, <%= cause.state %> <%= cause.zip %>
+          </p>
+        </td>
+
+        <td><%= cause.phone %></td>
+        <td><%= link_to "#{cause.url}"%></td>
+
+        <td> <%= image_tag "#{cause.image}" %></td>
+
+      </tr>
+
+    <% end %>
+  </tbody>
+</table>

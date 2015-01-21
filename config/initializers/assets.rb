@@ -7,6 +7,11 @@ Rails.application.config.assets.precompile += %w( environment.png )
 Rails.application.config.assets.precompile += %w( food.png )
 Rails.application.config.assets.precompile += %w( health.png )
 Rails.application.config.assets.precompile += %w( shelter.png )
+Rails.application.config.assets.precompile += %w( give.png )
+Rails.application.config.assets.precompile += %w( a.png )
+Rails.application.config.assets.precompile += %w( s.png )
+Rails.application.config.assets.precompile += %w( p.png )
+
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.

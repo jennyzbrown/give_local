@@ -1,0 +1,67 @@
+<%= link_to "All Causes", causes_path %>
+
+<h1><%=@cause.name%></h1>
+
+<table class="causes">
+  <thead>
+    <tr>
+      <th width="100">Name</th>
+      <th width="100">Category</th>
+      <th width="100">$1 Means: </th>
+      <th width="100">Address</th>
+      <th width="100">Phone</th>
+      <th width="100">URL</th>
+      <th width="100">Image</th>
+      <th width="100">Total Contributions: </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><%= @cause.name %></td>
+      <td><%= @cause.category %></td>
+      <td><%= @cause.description %></td>
+
+      <td>
+        <p>
+          <%= @cause.street %>
+          <br>
+          <%= @cause.city %>, <%= @cause.state %> <%= @cause.zip %>
+        </p>
+      </td>
+      <td><%= @cause.phone %></td>
+      <td><%= @cause.url %></td>
+      <td> <%= image_tag "#{@cause.image}" %></td>
+      <td> $ <%= @cause.cause_account %>.00</td>
+    </tr>
+  </tbody>
+</table>
+
+<% if user_signed_in? %>
+  <p class="cta-button"><%= link_to "Give One", donates_path(@cause), method: :post, data:
+  { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
+<% else %>
+  <p class="cta-button"><%= link_to "Give One", new_user_session_path, method: :post, data:
+    { confirm: 'You must be signed in to donate!' }, class: 'button round' %></p>
+<% end %>
+
+
+<% if current_user != nil && current_user.email == "admin@gmail.com"  %>
+    <%= link_to "Edit", edit_cause_path(@cause) %><br>
+
+    <%= link_to "Delete this Cause", cause_path(@cause), method: :delete, data:
+    { confirm: 'Are you sure?' } %>
+
+<% end %>
+
+
+
+   <p class="cause_name"><%= @cause.name %></p>
+    <p class="cause_name"><%= @cause.category %></p>
+    <p class="cause_description"><%= @cause.description %></p>
+    <p class="cause_address"><%= @cause.street %><%= @cause.city %>, <%= @cause.state %> <%= @cause.zip %></p>
+    <p class="url"><%= @cause.url %></p>
+    <p><%= @cause.phone %></p>
+
+  <div class="small-2 small-pull-10 columns">2, last</div>
+ <p> <%= image_tag "#{@cause.image}" %></p>
+

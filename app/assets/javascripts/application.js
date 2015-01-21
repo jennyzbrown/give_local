@@ -9,10 +9,25 @@
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+
+// $(".some-class-on-a-button").on("click", function(e) {
+  //   e.preventDefault();
+  //   alert("you clicked a link");
+  // });
+
 //= require jquery
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+// This line will wait until the page has finished loading to run
+$(document).ready(function(){
+
+  // Initialize foundation...
+  $(document).foundation();
+
+       // $('div').fadeIn('slow', .5);
+
+  // Add any more JavaScript here...
+});
+});

@@ -1,45 +1,32 @@
-<h1>All Causes</h1><br>
-<%= link_to "Add Your Cause", new_cause_path %></br>
 
-<table class="causes">
-  <thead>
-    <tr>
-      <th width="100">Name</th>
-      <th width="100">Category</th>
-      <th width="100">$1 Means: </th>
-      <th width="100">Address</th>
-      <th width="100">Phone</th>
-      <th width="100">URL</th>
-      <th width="100">Image</th>
 
-    </tr>
-  </thead>
-  <tbody>
+<div class="row">
+  <ul class="medium-block-grid-4">
+    <li>
+      <%= link_to image_tag('give.png'), "/" %>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+      <br><%= link_to image_tag('a.png'), causes_path%>
+      <%= link_to image_tag('s.png'), new_cause_path %>
+      <%= link_to image_tag('p.png'), user_path(current_user) %>
+    </li>
+  </ul>
+</div>
+
+<div class="row">
+  <ul class="large-block-grid-4">
 
     <% @causes.each do |cause| %>
 
-      <tr>
-        <td><%= link_to cause.name, cause_path(cause) %></td>
-
-        <td><%= cause.category %></td>
-
-        <td><%= cause.description %></td>
-
-        <td>
-          <p>
-            <%= cause.street %>
-            <br>
-            <%= cause.city %>, <%= cause.state %> <%= cause.zip %>
-          </p>
-        </td>
-
-        <td><%= cause.phone %></td>
-        <td><%= link_to "#{cause.url}"%></td>
-
-        <td> <%= image_tag "#{cause.image}" %></td>
-
-      </tr>
+    <li class = "index-icons">  <%= link_to image_tag("#{cause.image}"), cause_path(cause) %> </li>
 
     <% end %>
-  </tbody>
-</table>
+  </ul>
+
+</div>
+
+
