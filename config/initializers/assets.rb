@@ -10,7 +10,10 @@ Rails.application.config.assets.precompile += %w( shelter.png )
 Rails.application.config.assets.precompile += %w( give.png )
 Rails.application.config.assets.precompile += %w( a.png )
 Rails.application.config.assets.precompile += %w( s.png )
-Rails.application.config.assets.precompile += %w( p.png )
+Rails.application.config.assets.precompile += %w( all.png )
+Rails.application.config.assets.precompile += %w( plus.png )
+Rails.application.config.assets.precompile += %w( profile.png )
+
 
 # Rails.application.config.assets.paths << Emoji.images_path
 

@@ -4,10 +4,31 @@
 
 $border-color: #efefef;
 
+// Nav Section
+
+.top-bar-section ul li > a {
+  font-family: HelveticaNeue-Medium;
+  color: #24657F;
+}
 
 
 
+// .top-bar-section .right li.hover {
+//   color: #DA8158;
+// }
 
+// feature box
+
+// .large-block-grid-3-cause {
+//   center:true;
+// }
+
+
+
+.medium-block-grid-4 li a:hover{
+  opacity: .5;
+
+}
 .item-wrapper {
   padding: 20px;
   border: 2px solid $border-color;
@@ -42,8 +63,3 @@ p {
   font-size: 13px;
   margin-bottom: 0;
 }
-
-
-
-
-
