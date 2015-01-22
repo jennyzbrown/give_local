@@ -34,7 +34,7 @@
   </tbody>
 </table>
 
-<p class="cta-button"><%= link_to "Give One", donates_path(@cause), method: :post, data: { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
+<p class="cta-button"><%= link_to "give one", donates_path(@cause), method: :post, data: { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
 
 <% if current_user == admin %>
 <%= link_to "Edit", edit_cause_path(@cause) %><br>

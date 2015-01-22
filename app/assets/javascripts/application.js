@@ -29,5 +29,7 @@ $(document).ready(function(){
        // $('div').fadeIn('slow', .5);
 
   // Add any more JavaScript here...
-});
+
+
+  });
 });

@@ -94,6 +94,11 @@ $include-html-global-classes: $include-html-classes;
 // We use these to define default font weights
 // $font-weight-normal: normal !default;
 // $font-weight-bold: bold !default;
+$gorange :#DA8158;
+$gdarkblue :#24657F;
+$gblue :#39A1CB;
+$glightblue :#93DFFE;
+$ggrayblue :#49707F;
 
 $white       : #FFFFFF;
 $ghost       : #FAFAFA;
@@ -124,7 +129,7 @@ $warning-color: #f08a24;
 $info-color: #a0d3e8;
 
 // We use these to control various global styles
-// $body-bg: white;
+$body-bg: white;
 // $body-font-color: $jet;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -140,8 +145,8 @@ $info-color: #a0d3e8;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
-// $global-rounded: 1000px;
+$global-radius: 3px;
+$global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
 // $shiny-edge-size: 0 1px 0;
@@ -1031,24 +1036,24 @@ $button-bg-color: #24657F;
 // $include-html-media-classes: $include-html-classes;
 
 // We use this to set the progress bar height
-// $progress-bar-height: rem-calc(25);
-// $progress-bar-color: $vapor  ;
+$progress-bar-height: rem-calc(100);
+$progress-bar-color: $gorange;
 
 // We use these to control the border styles
-// $progress-bar-border-color: scale-color($white, $lightness: 20%);
-// $progress-bar-border-size: 1px;
+// $progress-bar-border-color: scale-color($gorange, $lightness: 20%);
+// $progress-bar-border-size: 3px;
 // $progress-bar-border-style: solid;
-// $progress-bar-border-radius: $global-radius;
+// $progress-bar-border-radius: 20px;
 
 // We use these to control the margin & padding
 // $progress-bar-pad: rem-calc(2);
 // $progress-bar-margin-bottom: rem-calc(10);
 
 // We use these to set the meter colors
-// $progress-meter-color: $primary-color;
-// $progress-meter-secondary-color: $secondary-color;
+$progress-meter-color: rgba(255, 255, 255, .5);
+// $progress-meter-secondary-color: white;
 // $progress-meter-success-color: $success-color;
-// $progress-meter-alert-color: $alert-color;
+$progress-meter-alert-color: $alert-color;
 
 // 24. Range Slider
 // - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -1388,7 +1393,7 @@ $topbar-bg-color: white;
 
 // Set the link colors and styles for top-level nav
 // $topbar-link-color: $white;
-$topbar-link-color-hover: #DA8158;
+$topbar-link-color-hover: #4A4A4A;
 // $topbar-link-color-active: $white;
 // $topbar-link-color-active-hover: #DA8158;
 // $topbar-link-weight: $font-weight-normal;

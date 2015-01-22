@@ -9,4 +9,9 @@ class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  def percent_given
+    given = amount_given.to_f / goal.to_f
+    return (given * 100).round
+  end
 end

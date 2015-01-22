@@ -1,8 +1,36 @@
 //= require_tree .
 //= require_self
 //= require foundation_and_overrides
-
+$gorange :#DA8158;
+$gdarkblue :#24657F;
+$gblue :#39A1CB;
+$glightblue :#93DFFE;
+$ggrayblue :#49707F;
 $border-color: #efefef;
+// profile
+
+.progress-bar{
+  padding: 100px;
+   width: 300%;
+  background-color: $gorange;
+
+}
+
+.meter{
+
+  border-radius: 100px;
+  border-width: 5px;
+  border-color: white;
+}
+.progress{
+  border-radius: 100px;
+  border-color: rgba(255, 255, 255, .8);
+  border-width: 3px;
+}
+
+
+
+
 
 // Top Bar Section
 
@@ -10,7 +38,7 @@ $border-color: #efefef;
   font-size: 130%;
   font-family: HelveticaNeue-Bold;
   color: white;
-    -webkit-text-stroke: 2px #24657F;
+  -webkit-text-stroke: 2px #24657F;
 
 }
 
