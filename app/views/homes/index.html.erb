@@ -1,5 +1,5 @@
 <div class="row">
-  <ul class="medium-block-grid-4">
+<ul class="medium-block-grid-4 text-right">
     <li>
       <br><%= link_to image_tag('give.png'), "/" %>
     </li>
@@ -10,55 +10,47 @@
     <li>
       <br><%= link_to image_tag('all.png'), causes_path%>
       <%= link_to image_tag('plus.png'), new_cause_path %>
-        <% if user_signed_in? %>
-          <%= link_to image_tag('profile.png'), user_path(current_user) %>
-        <% else %>
-          <%= link_to image_tag('profile.png'), new_user_session_path %>
-        <% end %>
+      <% if user_signed_in? %>
+      <%= link_to image_tag('profile.png'), user_path(current_user) %>
+      <% else %>
+      <%= link_to image_tag('profile.png'), new_user_session_path %>
+      <% end %>
     </li>
   </ul>
 </div>
-
 <div class="row">
   <ul class="medium-block-grid-4">
     <li>
     </li>
-    <li>
-    </li>
   </ul>
 </div>
+
 
 
 <div class="row">
-  <ul class="large-block-grid-3-cause">
-    <li>
-    </li>
-    <li>
-      <%= image_tag "#{@cause.image}" %>
-    </li>
+  <div class="small-6 columns text-right">
+    <%= image_tag "#{@cause.image}" %>
 
-    <li>
-      <h3><%= @cause.name %></h3>
-      <h5>$1 = <%= @cause.description %></h5>
-      <p><%= @cause.street %><%= @cause.city %>, <%= @cause.state %> <%= @cause.zip %></p>
-      <p class="url"><%= @cause.url %></p>
-      <p class="phone"><%= @cause.phone %></p>
-
-        <% if user_signed_in? %>
-      <p class="give-button"><%= link_to "Give One", donates_path(@cause), method: :post, data:
-        { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
-        <% else %>
-      <p class="give-button"><%= link_to "Give One", new_user_session_path, method: :post, data:
-          { confirm: 'You must be signed in to donate!' }, class: 'button round' %></p>
+  </div>
+  <div class="small-6 columns">
+    <p class="name"> <%= @cause.name %></p>
+    <p class="description">$1 : <%= @cause.description %></p>
+    <p class="address"><%= @cause.street %><%= @cause.city %>, <%= @cause.state %> <%= @cause.zip %></p>
+    <p class="url"><%= @cause.url %></p>
+    <p class="phone"><%= @cause.phone %></p>
+    <% if user_signed_in? %>
+    <p class="give-button"><%= link_to "give one", donates_path(@cause), method: :post, data:
+      { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
+      <% else %>
+      <p> <%= link_to "give one", new_user_session_path, method: :post, data:
+        { confirm: 'You must be signed in to donate!' }, class: 'button round' %></p>
         <% end %>
+      </div>
+    </div>
 
-    </li>
-  </ul>
-</div>
-
-<% if current_user != nil && current_user.email == "admin@gmail.com"  %>
+    <% if current_user != nil && current_user.email == "admin@gmail.com"  %>
     <%= link_to "Edit", edit_cause_path(@cause) %><br>
 
     <%= link_to "Delete this Cause", cause_path(@cause), method: :delete, data:
     { confirm: 'Are you sure?' } %>
-<% end %>
+    <% end %>

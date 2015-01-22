@@ -4,27 +4,71 @@
 
 $border-color: #efefef;
 
-// Nav Section
+// Top Bar Section
 
 .top-bar-section ul li > a {
-  font-family: HelveticaNeue-Medium;
-  color: #24657F;
+  font-size: 130%;
+  font-family: HelveticaNeue-Bold;
+  color: white;
+    -webkit-text-stroke: 2px #24657F;
+
+}
+
+// Causes Feature
+.small-6{
+  text-align: center;
+
+
+
+  p.name{
+    border-top-color: #24657F;
+    border-top-style: dotted;
+    border-width: 2px;
+    font-size: 30px;
+    text-transform: lowercase;
+    font-family: HelveticaNeue-medium;
+    color: #4A4A4A;
+
+  }
+
+
+  p.description{
+    font-size: 20px;
+    font-family: HelveticaNeue;
+    text-transform: lowercase;
+    color: #4A4A4A;
+
+
+  }
+
+  p.address{
+    padding-top: 25px;
+    font-size: 15 px;
+    font-family: HelveticaNeue;
+  }
+
+  p.url{
+
+  }
+
+  p.phone{
+    padding-bottom: 25px;
+    border-bottom-color: #24657F;
+    border-bottom-style: dotted;
+    border-width: 2px;
+  }
+  p.give-button{
+    padding-top: 25px;
+
+    :hover{
+      opacity: .5;
+    }
+
+  }
 }
 
 
-
-// .top-bar-section .right li.hover {
-//   color: #DA8158;
-// }
-
-// feature box
-
-// .large-block-grid-3-cause {
-//   center:true;
-// }
-
-
-
+// Causes Index Section
 .medium-block-grid-4 li a:hover{
   opacity: .5;
 

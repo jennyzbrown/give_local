@@ -41,10 +41,10 @@
       <p class="phone"><%= @cause.phone %></p>
 
         <% if user_signed_in? %>
-      <p class="give-button"><%= link_to "Give One", donates_path(@cause), method: :post, data:
+      <p class="give-button"><%= link_to "give one", donates_path(@cause), method: :post, data:
         { confirm: 'Thank You! You Donated $1' }, class: 'button round' %></p>
         <% else %>
-      <p class="give-button"><%= link_to "Give One", new_user_session_path, method: :post, data:
+      <p class="give-button"><%= link_to "give one", new_user_session_path, method: :post, data:
           { confirm: 'You must be signed in to donate!' }, class: 'button round' %></p>
         <% end %>
 
