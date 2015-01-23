@@ -26,10 +26,9 @@ $(document).ready(function(){
   // Initialize foundation...
   $(document).foundation();
 
-       // $('div').fadeIn('slow', .5);
-
-  // Add any more JavaScript here...
-
-
+       $('.progress').mouseover(function() {
+        $('.progress').css('background-color', 'red');
+        });
+      });
   });
 });

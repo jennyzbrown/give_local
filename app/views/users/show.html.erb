@@ -19,7 +19,7 @@
   </ul>
 </div>
 <div class="row">
-  <ul class="medium-block-grid-4 progress-bar">
+  <ul class="medium-block-grid-4 progress-box">
     <li>
       <div class="progress">
         <span class="meter" style="width: <%= current_user.percent_given %>%"></span>
@@ -29,13 +29,23 @@
 </div>
 
 <div class="row">
-  <div class="large-4 columns">
+  <ul class="medium-block-grid-1 goal-box">
+    <li class="goal">meet your goal</li>
+  </ul>
+</div>
 
+
+<div class="col-md-6 col-md-offset-6 causes-box">
+  <div class="row">
+    <p class="my-causes">my causes: </p>
+    <% @user.causes.uniq.each do |cause|  %>
+      <p class="cause-list">
+        <%= link_to cause.name, cause_path(cause)%>
+      </p>
+    <% end %>
+    <p class="edit-links">
+      <%= link_to 'edit or', edit_user_registration_path %>
+      <%= link_to "delete profile", user_registration_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
   </div>
 </div>
-
-<div class="user-buttons">
-  <li class="cta-button"><%= link_to 'Edit My Account', edit_user_registration_path, class: 'button round' %></li>
-  <li class="cta-button"><%= link_to "Delete My Account", user_registration_path, method: :delete, data: { confirm: 'Are you sure?' }, class: 'button round' %></li>
-</div>
-
