@@ -7,6 +7,23 @@ $gblue :#39A1CB;
 $glightblue :#93DFFE;
 $ggrayblue :#49707F;
 $border-color: #efefef;
+
+// Top Bar Section
+
+.top-bar-section ul li > a {
+  font-size: 130%;
+  font-family: HelveticaNeue-Bold;
+  color: white;
+  -webkit-text-stroke: 2px #24657F;
+
+}
+
+.top-bar-section ul li{
+  padding-left: 100px;
+
+}
+
+
 // profile
 
 .progress-bar{
@@ -28,20 +45,6 @@ $border-color: #efefef;
   border-width: 3px;
 }
 
-
-
-
-
-// Top Bar Section
-
-.top-bar-section ul li > a {
-  font-size: 130%;
-  font-family: HelveticaNeue-Bold;
-  color: white;
-  -webkit-text-stroke: 2px #24657F;
-
-}
-
 // Causes Feature
 .small-6{
   text-align: center;
@@ -49,6 +52,7 @@ $border-color: #efefef;
 
 
   p.name{
+    border-top-color: #24657F;
     border-top-color: #24657F;
     border-top-style: dotted;
     border-width: 2px;

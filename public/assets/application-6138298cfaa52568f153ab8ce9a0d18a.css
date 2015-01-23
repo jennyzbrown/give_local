@@ -9080,12 +9080,7 @@ th.hide-for-touch {
 }
 
 /* line 37, /Users/jennybrown/Desktop/LAUNCH/give_local/app/assets/stylesheets/application.scss */
-.top-bar-section ul li > a {
-  font-size: 130%;
-  font-family: HelveticaNeue-Bold;
-  color: white;
-  -webkit-text-stroke: 2px #24657F;
-}
+
 
 /* line 46, /Users/jennybrown/Desktop/LAUNCH/give_local/app/assets/stylesheets/application.scss */
 .small-6 {
