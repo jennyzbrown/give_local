@@ -26,10 +26,13 @@ $(document).ready(function(){
   // Initialize foundation...
   $(document).foundation();
 
-    $('.progress').mouseover(function() {
-        $('.progress').text("goal");
-      });
+    $('.meter').mouseenter(function() {
+      console.log("mouseenter");
+        $('.meter').text("amount contributed");
+      })
+    .mouseleave(function(){
+      $('.meter').text(" ");
     });
 
-  });
+
 });

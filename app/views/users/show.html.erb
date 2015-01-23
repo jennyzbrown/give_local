@@ -41,14 +41,15 @@
 
 <div class="row">
   <ul class="medium-block-grid-1 goal-box">
-    <li class="goal">meet your goal</li>
+    <li class="goal">goal</li>
   </ul>
 </div>
 
 
-<div class="col-md-6 col-md-offset-6 causes-box">
-  <div class="row">
-    <p class="my-causes">my causes: </p>
+
+<div class="row">
+  <ul class="large-block-grid-4 causes-box">
+    <p class="my-causes"><%= image_tag('my_causes.png')%></p>
     <% @user.causes.uniq.each do |cause|  %>
       <p class="cause-list">
         <%= link_to cause.name, cause_path(cause)%>
