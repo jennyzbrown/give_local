@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'freshie'
+# gem 'freshie'
 
 gem "pry-rails"
 gem 'rails', '4.2.0'
