@@ -9,13 +9,15 @@
     </li>
     <li>
       <br><%= link_to image_tag('all.png'), causes_path%>
-      <%= link_to image_tag('plus.png'), new_cause_path %>
+
 
         <% if user_signed_in? %>
           <%= link_to image_tag('profile.png'), user_path(current_user) %>
         <% else %>
           <%= link_to image_tag('profile.png'), new_user_session_path %>
         <% end %>
+
+        <%= link_to image_tag('plus.png'), new_cause_path %>
 
     </li>
     </li>
@@ -30,14 +32,9 @@
 
 <div class="row">
   <ul class="large-block-grid-4">
-
     <% @causes.each do |cause| %>
-
-    <li class = "index-icons">  <%= link_to image_tag("#{cause.image}"), cause_path(cause) %> </li>
-
+      <li class = "index-icons">  <%= link_to image_tag("#{cause.image}"), cause_path(cause) %> </li>
     <% end %>
   </ul>
-
 </div>
-
 

@@ -26,9 +26,10 @@ $(document).ready(function(){
   // Initialize foundation...
   $(document).foundation();
 
-       $('.progress').mouseover(function() {
-        $('.progress').css('background-color', 'red');
-        });
+    $('.progress').mouseover(function() {
+        $('.progress').text("goal");
       });
+    });
+
   });
 });

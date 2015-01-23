@@ -1,45 +1,79 @@
-<h2>Sign up</h2>
+
+<div class="row">
+  <ul class="medium-block-grid-4">
+    <li>
+      <br><%= link_to image_tag('give.png'), "/" %>
+    </li>
+    <li>
+    </li>
+    <li>
+    </li>
+    <li>
+      <br><%= link_to image_tag('all.png'), causes_path%>
+
+        <% if user_signed_in? %>
+          <%= link_to image_tag('profile.png'), user_path(current_user) %>
+        <% else %>
+          <%= link_to image_tag('profile.png'), new_user_session_path %>
+        <% end %>
+
+        <%= link_to image_tag('plus.png'), new_cause_path %>
+    </li>
+  </ul>
+</div>
+<div class="row">
+  <ul class="medium-block-grid-4">
+    <li></li>
+    <li class="form-header">Sign Up For Give Local</li>
+  </ul>
+</div>
+
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+<%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :"User Name" %><br />
-    <%= f.text_field :user_name %>
-  </div>
+<div class="row">
+  <div class="small-8">
 
-  <div class="field">
-    <%= f.label :goal %><br />
-    <%= f.number_field :goal %>
-  </div>
+      <div class="field">
+        <%= f.label :"User Name" %><br />
+        <%= f.text_field :user_name %>
+      </div>
 
-  <div class="field">
-    <%= f.label :account %><br />
-    <%= f.number_field :account %>
-  </div>
+      <div class="field">
+        <%= f.label :goal %><br />
+        <%= f.number_field :goal %>
+      </div>
+
+      <div class="field">
+        <%= f.label :account %><br />
+        <%= f.number_field :account %>
+      </div>
 
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+      <div class="field">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @validatable %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+      <div class="field">
+        <%= f.label :password %>
+        <% if @validatable %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+      <div class="field">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      </div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
+      <div class="actions">
+        <%= f.submit "Sign up", class: 'button round' %>
+
+      </div>
+    </div>
   </div>
 <% end %>
 
-<%= render "devise/shared/links" %>

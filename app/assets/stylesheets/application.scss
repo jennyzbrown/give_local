@@ -8,8 +8,23 @@ $glightblue :#93DFFE;
 $ggrayblue :#49707F;
 $border-color: #efefef;
 
-// Top Bar Section
+#error_explanation h2{
+text-align: left;
+padding-left: 400px;
+font-size: 20px;
+color: $ggrayblue;
+font-family: HelveticaNeue;
+}
 
+#error_explanation li{
+text-align: left;
+padding-left: 500px;
+font-size: 20px;
+color: $ggrayblue;
+font-family: HelveticaNeue;
+}
+
+// Top Bar Section
 .top-bar-section ul li > a {
   font-size: 130%;
   font-family: HelveticaNeue-Bold;
@@ -17,13 +32,24 @@ $border-color: #efefef;
   -webkit-text-stroke: 2px $ggrayblue;
 }
 
-
 .top-bar-section ul {
   margin-right: 60px;
 }
 
+// Top Icon Bar
 
-// profile
+// Form Header
+.form-header{
+  text-align: center;
+  text-transform: lowercase;
+  font-size: 150%;
+  font-family: HelveticaNeue-Medium;
+  color: $gorange;
+
+  // -webkit-text-stroke: 3.5px $gorange;
+}
+
+// Profile Page
 .goal-box{
   background-color: $gorange;
   margin-right: 50px;
@@ -191,4 +217,8 @@ p {
   color: #888;
   font-size: 13px;
   margin-bottom: 0;
+}
+
+.large-block-grid-4 .index-icons:hover{
+  opacity: .5;
 }

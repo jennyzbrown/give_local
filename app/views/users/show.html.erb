@@ -9,17 +9,28 @@
     </li>
     <li>
       <br><%= link_to image_tag('all.png'), causes_path%>
+
+        <% if user_signed_in? %>
+          <%= link_to image_tag('profile.png'), user_path(current_user) %>
+        <% else %>
+          <%= link_to image_tag('profile.png'), new_user_session_path %>
+        <% end %>
+
       <%= link_to image_tag('plus.png'), new_cause_path %>
-      <% if user_signed_in? %>
-      <%= link_to image_tag('profile.png'), user_path(current_user) %>
-      <% else %>
-      <%= link_to image_tag('profile.png'), new_user_session_path %>
-      <% end %>
     </li>
   </ul>
 </div>
+
 <div class="row">
-  <ul class="medium-block-grid-4 progress-box">
+  <ul class="medium-block-grid-4">
+    <li>
+    </li>
+  </ul>
+</div>
+
+
+<div class="row">
+  <ul class="large-block-grid-4 progress-box">
     <li>
       <div class="progress">
         <span class="meter" style="width: <%= current_user.percent_given %>%"></span>

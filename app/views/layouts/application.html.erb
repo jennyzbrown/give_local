@@ -17,23 +17,22 @@
     <section class="top-bar-section">
       <ul class="right">
         <%- if current_user -%>
-          <li><%= link_to 'sign out', destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to 'sign out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>
-          <li><%= link_to 'log in', new_user_session_path %></li>
-          <li><%= link_to 'sign up', new_user_registration_path %></li>
+        <li><%= link_to 'log in', new_user_session_path %></li>
+        <li><%= link_to 'sign up', new_user_registration_path %></li>
         <%- end -%>
       </ul>
     </section>
   </nav>
 
   <%- flash.each do |key, value| -%>
-    <div class="flash flash-<%= key %>">
-      <%= value %>
-    </div>
+  <div class="flash flash-<%= key %>">
+    <%= value %>
+  </div>
   <%- end -%>
 
   <%= yield %>
-
   <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
 </body>
