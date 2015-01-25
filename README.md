@@ -1,8 +1,8 @@
 #give local
 
-Give Local is a Rails App that surfaces local causes and charities and enables seemless and hasselfree giving.
+give local is a Rails App that surfaces local causes and charities and enables seamless and hassle-free giving.
 
-Give Local features a different chairty every day, through a random selection algorithm, to make choosing a charity or cause simple and easy:
+give local features a different charity every day, through a random selection algorithm, to make choosing a charity or cause simple and easy:
 
 ![alt tag](/screenshots/feature_page.png)
 
@@ -24,6 +24,6 @@ Causes and charities add themselves to the database through a new form:
 
 The functionality of the app works however the alpha version does not support the actual exchange of money. The accounts for both users and causes are placeholders.
 
-Upcoming features include: geolocation of users and causes, integration of a payment and exchange infastructure.
+Upcoming features include: geolocation of users and causes, and integration of a payment and exchange infrastructure.
 
-Give Local's URL: givelocal.herokuapp.com
+give local's URL: givelocal.herokuapp.com
