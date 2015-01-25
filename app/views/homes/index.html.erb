@@ -37,7 +37,7 @@
     <p class="name"> <%= @cause.name %></p>
     <p class="description">$1 : <%= @cause.description %></p>
     <p class="address"><%= @cause.street %><%= @cause.city %>, <%= @cause.state %> <%= @cause.zip %></p>
-    <p class="url"><%= @cause.url %></p>
+    <p class="url"><%= link_to @cause.url, "http://#{@cause.url}"%></p>
     <p class="phone"><%= @cause.phone %></p>
     <% if user_signed_in? %>
     <p class="give-button"><%= link_to "give one", donates_path(@cause), method: :post, data:
