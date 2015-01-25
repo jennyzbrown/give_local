@@ -22,6 +22,8 @@ Causes and charities add themselves to the database through a new form:
 
 ![alt tag](/screenshots/add_cause_page.png)
 
+<strong> Please Note: <strong>
+
 The functionality of the app works however the alpha version does not support the actual exchange of money. The accounts for both users and causes are placeholders.
 
 Upcoming features include: geolocation of users and causes, and integration of a payment and exchange infrastructure.
