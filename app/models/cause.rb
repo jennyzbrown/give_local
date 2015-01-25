@@ -30,7 +30,5 @@ class Cause < ActiveRecord::Base
     elsif category_name =="shelter"
       'shelter.png'
     end
-
-
   end
 end

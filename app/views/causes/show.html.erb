@@ -28,8 +28,6 @@
   </ul>
 </div>
 
-
-
 <div class="row">
   <div class="small-6 columns text-right">
     <%= image_tag "#{@cause.image}" %>
@@ -50,9 +48,9 @@
       </div>
     </div>
 
-    <% if current_user != nil && current_user.email == "admin@gmail.com"  %>
-    <%= link_to "Edit", edit_cause_path(@cause) %><br>
+<% if current_user != nil && current_user.email == "admin@gmail.com"  %>
+  <%= link_to "Edit", edit_cause_path(@cause) %><br>
 
-    <%= link_to "Delete this Cause", cause_path(@cause), method: :delete, data:
-    { confirm: 'Are you sure?' } %>
-    <% end %>
+  <%= link_to "Delete this Cause", cause_path(@cause), method: :delete, data:
+{ confirm: 'Are you sure?' } %>
+<% end %>

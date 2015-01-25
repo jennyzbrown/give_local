@@ -1,10 +1,5 @@
 class DonatesController < ApplicationController
   def create
-
-    #add strong params in here
-    #see joining table
-
-
     @user = current_user
     @user.account -= 1
     @user.amount_given += 1
@@ -14,6 +9,5 @@ class DonatesController < ApplicationController
     @cause.save
     @user.save
     redirect_to user_path(@user)
-
   end
 end

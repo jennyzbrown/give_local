@@ -8,27 +8,6 @@ $glightblue :#93DFFE;
 $ggrayblue :#49707F;
 $border-color: #efefef;
 
-// Errors
-.simple_form {
-  margin-left: 150px;
-
-}
-#error_explanation h2{
-text-align: left;
-padding-left: 400px;
-font-size: 20px;
-color: $ggrayblue;
-font-family: HelveticaNeue;
-}
-
-#error_explanation li{
-text-align: left;
-padding-left: 500px;
-font-size: 20px;
-color: $ggrayblue;
-font-family: HelveticaNeue;
-}
-
 // Top Bar Section
 .top-bar-section ul li > a {
   font-size: 130%;
@@ -50,6 +29,8 @@ font-family: HelveticaNeue;
   font-size: 150%;
   font-family: HelveticaNeue-Medium;
   color: $gorange;
+
+  // -webkit-text-stroke: 3.5px $gorange;
 }
 
 // Profile Page
@@ -57,7 +38,6 @@ font-family: HelveticaNeue;
   background-color: $gorange;
   margin-right: 50px;
   margin-left: 50px;
-  padding-top: 150px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 
@@ -91,13 +71,9 @@ font-family: HelveticaNeue;
 }
 
 .meter{
-  color: white;
   border-radius: 100px;
-  // border-width: 20px;
+  border-width: 10px;
   border-color: white;
-  font-size: 180%;
-  font-family: HelveticaNeue-Medium;
-  text-align: center;
 
 }
 
@@ -109,20 +85,25 @@ font-family: HelveticaNeue;
 
 .causes-box{
   border-color: white;
-  padding-top: 50px;
-  margin-right: 50px;
-  margin-left: 70px;
-
 }
+.my-causes{
+  margin-left: 50px;
+  padding-top: 50px;
+  text-align: left;
 
-.cause-list {
+  font-size: 300%;
+  font-family: HelveticaNeue-Medium;
+  color: white;
+  -webkit-text-stroke: 3.5px $gorange;
+}
+.cause-list{
   text-align: center;
   font-color: black;
-  font-size: 25px;
+  font-size: 30px;
   font-family: HelveticaNeue;
   text-transform: lowercase;
-
 }
+
 .edit-links {
   padding-top: 140px;
   font-color: black;
