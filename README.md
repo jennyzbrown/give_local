@@ -8,5 +8,5 @@ The functionality of the app works however the alpha version does not support th
 
 Upcoming features include: geolocation of users and causes, integration of a payment and exchange infastructure.
 
-![alt tag](profile_page.png)
+![alt tag](/screenshots/profile_page.png)
 Give Local's URL: givelocal.herokuapp.com
