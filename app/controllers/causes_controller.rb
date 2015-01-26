@@ -1,6 +1,6 @@
 class CausesController < ApplicationController
   def index
-    @causes = Cause.all
+    @causes = Cause.all.order("id DESC")
   end
 
   def new
