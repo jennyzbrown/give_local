@@ -26,6 +26,6 @@ Causes and charities add themselves to the database through a new form:
 
 The functionality of the app works however the alpha version does not support the actual exchange of money. The accounts for both users and causes are placeholders.
 
-Upcoming features include: geolocation of users and causes, and integration of a payment and exchange infrastructure.
+During this iteration of give local, the causes were seeded and geolocation of users and causes was not implemented. Upcoming features include: geolocation of users and causes, and integration of a payment and exchange infrastructure.
 
 give local's URL: givelocal.herokuapp.com
