@@ -2,7 +2,7 @@
 
 give local is a Rails App that surfaces local causes and charities and enables seamless and hassle-free giving.
 
-give local features a different charity every day, through a random selection algorithm, to make choosing a charity or cause simple and easy:
+give local features a different charity upon refresh, through the use of Ruby Gem 'freshie', to make choosing a charity or cause simple and easy:
 
 ![alt tag](/screenshots/feature_page.png)
 
