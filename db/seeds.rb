@@ -2,7 +2,7 @@ Cause.create(name: 'Pine Street Inn', description: 'Facilitates rescue and distr
 
 Cause.create(name: 'Project Bread', description: 'Contributes to fighting hunger.',  phone: '(617) 723-5000', category: 'food', street: '145 Border St.', city: 'Boston', state: 'MA', zip: '02128', url: 'www.projectbread.org',  image: 'food.png', cause_account: 0)
 
-Cause.create(name: 'The Nature Conservancy', description: 'Addresses conservation threats.',  phone: '(617) 532-8300', category: 'enviroment', street: '99 Bedford St.', city: 'Boston', state: 'MA', zip: '02111', url: 'www.nature.org',  image: 'environment.png')
+Cause.create(name: 'The Nature Conservancy', description: 'Addresses conservation threats.',  phone: '(617) 532-8300', category: 'enviroment', street: '99 Bedford St.', city: 'Boston', state: 'MA', zip: '02111', url: 'www.nature.org',  image: 'environment.png', cause_account: 0)
 
 Cause.create(name: 'Mass. Society for Prevention of Cruelty to Children', description: 'Provides services to ensure the health and safety of children',  phone: '(617) 587-1500', category: 'build', street: '3815 Washington St.', city: 'Roslindale', state: 'MA', zip: '02130', url: 'www.mspcc.com',  image: 'build.png', cause_account: 0)
 
